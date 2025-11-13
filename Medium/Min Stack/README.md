@@ -48,6 +48,5 @@ Pushing values will update the properties and put the old node in the `Below` pr
 ## Time Complexity - O(1)
 All operations happen in constant time.
 
-## Space Complexity
-### Push() - O(n)
+## Space Complexity - O(n)
 The space complexity will be the size of the stack. The `Below` property will be growing as new values get pushed in.

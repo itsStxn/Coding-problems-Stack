@@ -29,5 +29,5 @@ The code runs until one of the lists is empty, so the runtime depends on the len
 
 ## Space Complexity - O(1) or O(n)
 The space complexity depends on the approach used: 
-- The iterative approach uses a pointer, which stores a chain of references, not values. 
+- The iterative approach uses Nno data structure variables with `n` size are used. 
 - The recursive approach adds space to the call stack.
