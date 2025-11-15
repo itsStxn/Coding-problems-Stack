@@ -15,8 +15,8 @@ Given an array of integers heights representing the histogram's bar height where
 ***Output:*** 4
 
 ### Constraints:
-- 1 <= `heights.length` <= 105
-- 0 <= `heights[i]` <= 104
+- 1 <= `heights.length` <= 10^5
+- 0 <= `heights[i]` <= 10^4
 
 ## Strategy
 Use a stack to determine which rectangles are can still extend in width and which not. When a previous rectangle cannot extend anymore, it means that the current one has a smaller height.

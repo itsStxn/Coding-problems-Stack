@@ -38,11 +38,11 @@ meeting each other at 6. The fleet moves at speed 1 until it reaches target.
 
 ### Constraints:
 - n == `position.length` == speed.length
-- 1 <= `n` <= 105
-- 0 < `target` <= 106
+- 1 <= `n` <= 10^5
+- 0 < `target` <= 10^6
 - 0 <= `position[i]` < `target`
 - All the values of position are unique.
-- 0 < `speed[i]` <= 106
+- 0 < `speed[i]` <= 10^6
 
 ## Strategy
 Sort the positions. Run through the positions and push their calculated finish times in a stack. 
