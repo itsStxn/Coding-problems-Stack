@@ -45,6 +45,10 @@ meeting each other at 6. The fleet moves at speed 1 until it reaches target.
 - 0 < `speed[i]` <= 10^6
 
 ## Strategy
+### Without using a Stack
+Sort the cars positions in ascending order, meaning that we start from the cars closer to the target. For each car, if it gets to the target after a recorded slowest time, it means that the car never catches up to the previous one, hence add a fleet. The car's time becomes the new slowest. If a car is actually faster than the recorded slowest time, simply ignore it. 
+
+### Using a Stack
 Sort the positions. Run through the positions and push their calculated finish times in a stack. 
 
 At each iteration, use the stack to check if there are positions in the back with a smaller finish time. That means that they can catch up and form a fleet, so pop them from the stack.
@@ -54,5 +58,9 @@ The final stack size is the number of fleets.
 ## Time Complexity - O(nLog(n))
 Sorting the input array causes an increase of time complexity.
 
-## Space Complexity - O(n)
+## Space Complexity
+### Without using a Stack - O(1)
+No variable dynamically resizes based on `n` cars.
+
+### Using a Stack - O(n)
 A stack is used to store the finish times of each fleet.
