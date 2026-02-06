@@ -3,10 +3,12 @@
 ## Difficulties
 
 ### Easy
+
 - Merge Two Sorted Lists
 - Valid Parentheses
 
 ### Medium
+
 - Car Fleet
 - Daily Temperatures
 - Evaluate Reverse Polish Notation
@@ -14,9 +16,11 @@
 - Min Stack
 
 ### Hard
+
 - Largest Rectangle in Histogram
 
 ## Patterns
+
 - Requires **LIFO (last in, first out)** behavior
 - Use of **push / pop / peek**
 - Needs to track **previous elements**
