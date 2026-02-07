@@ -19,11 +19,14 @@ Given an array of integers heights representing the histogram's bar height where
 - 0 <= `heights[i]` <= 10^4
 
 ## Strategy
-Use a stack to determine which rectangles are can still extend in width and which not. When a previous rectangle cannot extend anymore, it means that the current one has a smaller height.
+Traverse the rectangles. Each rectangle's index can be considered to be added to a stack:
 
-So, calculate the area and compare it with the largest one found so far. Then, update its height to the current one and push its index to the stack.
+If the rectangle is greater than the previously stored rectangle:
+- Just push its index to the stack.
 
-When reached the end of the array, use a negative dummy height to force all the rectangles in the stack to be compared to the largest found.
+If the rectangle is lower than the previously stored rectangle:
+- Store the current rectangle, and keep popping rectangles greater than the stored one.
+- Then push back to the stack the index of the last rectangle that has been popped.
 
 ## Time Complexity - O(n)
 Altough the nested loops, each element is processed a constant amount of times. An element is always pushed and popped once.
